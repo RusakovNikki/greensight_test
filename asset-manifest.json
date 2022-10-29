@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/greensight_test/static/css/main.c5b01d3b.css",
+    "main.js": "/greensight_test/static/js/main.b132799e.js",
+    "static/media/Roboto-Regular.woff": "/greensight_test/static/media/Roboto-Regular.31012f9b3e3da44f87e8.woff",
+    "static/media/Rubik-Regular.woff": "/greensight_test/static/media/Rubik-Regular.9b504b121d513b85cf70.woff",
+    "static/media/Rubik-Light.woff": "/greensight_test/static/media/Rubik-Light.b98975383295673ea225.woff",
+    "static/media/Formular.woff": "/greensight_test/static/media/Formular.254f9c824c206145dfc1.woff",
+    "static/media/preview_company.svg": "/greensight_test/static/media/preview_company.d5461b290718a63a1ddcda0c05db1e85.svg",
+    "index.html": "/greensight_test/index.html",
+    "static/media/close-btn.svg": "/greensight_test/static/media/close-btn.ae8931fcf71c276d93ca0cc1a7260298.svg",
+    "static/media/down-btn.svg": "/greensight_test/static/media/down-btn.23db3d4ad45b235c5bb675e807c61b16.svg",
+    "main.c5b01d3b.css.map": "/greensight_test/static/css/main.c5b01d3b.css.map",
+    "main.b132799e.js.map": "/greensight_test/static/js/main.b132799e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c5b01d3b.css",
+    "static/js/main.b132799e.js"
+  ]
+}
