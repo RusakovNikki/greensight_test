@@ -1,28 +1,29 @@
 import React from "react"
-import useProducts from "../../hooks/products"
-import JobBlock from "../JobBlock"
-import Skeleton from "./Skeleton"
+import { useEffect } from "react"
+import { useState } from "react"
+import useJobFilter from "../../hooks/jobItems"
 
 const ShowJobs = ({ sortByType }) => {
   const URL = `https://api.hh.ru/vacancies`
 
-  const [items, isLoading] = useProducts(URL)
+  const [page, setPage] = useState(1)
+  const [items, isLoading, jobItems, skeletons] = useJobFilter(URL, sortByType)
 
-  const skeletons = [...new Array(5)].map((_, index) => (
-    <Skeleton key={index} />
-  ))
-  const jobItems = items
-    .map((item) => {
-      return <JobBlock key={item.id} {...item} />
-    })
-    .filter((item, index) => index < 5)
-    .filter((item) =>
-      sortByType.sortBy ? item.props.schedule.id === sortByType.sortBy : item
-    )
+  useEffect(() => {
+    setPage(1)
+  }, [sortByType])
+  const jobsFiltered = jobItems?.filter((item, index) => index < 5 * page)
 
+  console.log(jobsFiltered.length / 5)
+  const maxCountPage = jobsFiltered.length / 5
   return (
     <section className="jobs-container">
-      {isLoading ? skeletons : jobItems}
+      {isLoading ? skeletons : jobsFiltered}
+      {page <= maxCountPage && (
+        <button className="button" onClick={() => setPage((prev) => ++prev)}>
+          Смотреть еще...
+        </button>
+      )}
     </section>
   )
 }

@@ -8,6 +8,7 @@ function App() {
   const [sortByType, setSortByType] = useState({
     nameSort: "",
     sortBy: "",
+    searchByPosition: '',
   })
 
   return (

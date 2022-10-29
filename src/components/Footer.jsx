@@ -1,47 +1,82 @@
-import React from "react"
+import React, { useState } from "react"
 
 const Footer = () => {
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [phone, setPhone] = useState("")
+  const [comment, setComment] = useState("")
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    alert(`
+    Ваше имя ${name}
+    Ваша почта ${email}
+    Ваш номер ${phone}
+    Ваш коментарий ${comment}
+    `)
+  }
+
   return (
     <footer className="footer">
       <div className="footer__title title rubik-light">Leave a request</div>
       <div className="footer__flex-container">
         <div className="footer__flex-item footer__flex-item--margin">
-          <div className="form-item footer__form">
-            <p className="form-item__title rubik-regular">Your name</p>
+          <form onSubmit={handleSubmit}>
+            <div className="form-item footer__form">
+              <p className="form-item__title rubik-regular">Your name</p>
+              <input
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                name="name"
+                type="text"
+                placeholder="Please introduce yourself"
+                className="form-item__field rubik-regular"
+                required
+              />
+            </div>
+            <div className="form-item footer__form">
+              <p className="form-item__title rubik-regular">Email</p>
+              <input
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                name="email"
+                type="email"
+                placeholder="ivanov@mail.ru"
+                className="form-item__field"
+                required
+              />
+            </div>
+            <div className="form-item footer__form">
+              <p className="form-item__title  rubik-regular">Phone number</p>
+              <input
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                name="phone"
+                type="tel"
+                id="phone"
+                pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}"
+                placeholder="7999-123-4578"
+                className="form-item__field rubik-regular"
+                required
+              />
+            </div>
+            <div className="form-item footer__form">
+              <p className="form-item__title rubik-regular">Comment</p>
+              <input
+                value={comment}
+                onChange={(e) => setComment(e.target.value)}
+                type="tel"
+                name="comment"
+                placeholder="Message text"
+                className="form-item__field rubik-regular"
+              />
+            </div>
             <input
-              type="text"
-              placeholder="Please introduce yourself"
-              className="form-item__field rubik-regular"
+              type="submit"
+              className="button footer__buttom"
+              value="Send"
             />
-          </div>
-          <div className="form-item footer__form">
-            <p className="form-item__title rubik-regular">Email</p>
-            <input
-              type="text"
-              placeholder="ivanov@mail.ru"
-              className="form-item__field"
-            />
-          </div>
-          <div className="form-item footer__form">
-            <p className="form-item__title  rubik-regular">Phone number</p>
-            <input
-              type="text"
-              placeholder="+7 (999) 123-45-78"
-              className="form-item__field rubik-regular"
-            />
-          </div>
-          <div className="form-item footer__form">
-            <p className="form-item__title rubik-regular">Comment</p>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-              placeholder="Message text"
-              className="form-item__field rubik-regular"
-            />
-          </div>
-          <button className="button footer__buttom">Send</button>
+          </form>
           <div className="footer__confirm-message rubik-regular">
             By clicking "Send" you confirm your consent to the{" "}
             <a href="#" className="footer__link">
