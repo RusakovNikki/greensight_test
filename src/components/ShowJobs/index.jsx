@@ -14,6 +14,7 @@ const ShowJobs = () => {
   const jobItems = items.map((item) => {
     return <JobBlock key={item.id} {...item} />
   })
+  // .filter((item, index) => index < 5)
 
   return (
     <section className="jobs-container">

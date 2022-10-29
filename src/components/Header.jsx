@@ -30,9 +30,10 @@ const Header = () => {
           </div>
           {positionForm && (
             <ul className="header__ul">
-              <li>Full time</li>
-              <li>Half time</li>
-              <li>Part time</li>
+              <li>Полный день</li>
+              <li>Удаленная работа</li>
+              <li>Гибкий график</li>
+              <li>Сменный график</li>
             </ul>
           )}
         </div>

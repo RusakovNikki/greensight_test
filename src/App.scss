@@ -22,6 +22,11 @@
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .container {
   width: 1196px;
   margin: 0 auto;
@@ -34,12 +39,16 @@ ul {
 .jobs-container {
   &__item {
     width: 1196px;
-    height: 331px;
+    // height: 331px;
     display: flex;
     border: 1px solid black;
     padding: 20px;
     margin-bottom: 24px;
     box-sizing: border-box;
+  }
+
+  &__item:last-child {
+    margin-bottom: 0;
   }
   &__logo-container {
     width: 446px;
@@ -64,9 +73,29 @@ ul {
   &__specifics {
     font-size: 16px;
     line-height: 140%;
-    /* or 22px */
+    overflow: hidden;
 
     color: #000000;
+  }
+
+  &__specifics--height {
+    height: 200px;
+  }
+
+  &__more-btn {
+    font-size: 16px;
+    line-height: 140%;
+    margin-top: 8px;
+    /* or 22px */
+
+    text-align: center;
+
+    color: #a3a6a9;
+    cursor: pointer;
+  }
+
+  &__desc {
+    background: rgb(255, 255, 255);
   }
 }
 
@@ -86,7 +115,7 @@ ul {
       margin-top: 36px;
       margin-left: 120px;
       display: inline-block;
-
+      cursor: pointer;
       color: #a3a6a9;
     }
   }
@@ -97,6 +126,7 @@ ul {
     position: absolute;
     right: -24px;
     top: 40px;
+    cursor: pointer;
   }
 
   &__ul {
@@ -158,6 +188,7 @@ ul {
   }
 
   &__field {
+    font-family: "Rubik-light";
     border: none;
     width: inherit;
     font-size: 16px;
@@ -198,4 +229,87 @@ ul {
   &__type:last-child {
     margin-bottom: 0px;
   }
+}
+
+.footer {
+  margin-top: 90px;
+  margin-bottom: 164px;
+
+  &__title {
+    margin-bottom: 74px;
+  }
+
+  &__form {
+    width: 438px;
+    margin-bottom: 29px;
+  }
+
+  &__flex-container {
+    display: flex;
+  }
+
+  &__flex-item--margin {
+    margin-right: 292px;
+  }
+
+  &__buttom {
+    margin-top: 3px;
+  }
+
+  &__confirm-message {
+    width: 389px;
+    font-size: 14px;
+    line-height: 160%;
+    margin-top: 43px;
+  }
+
+  &__link {
+    display: inline-block;
+    border-bottom: 2px dashed black;
+  }
+}
+
+.about-company {
+  &__message {
+    font-size: 18px;
+    line-height: 160%;
+    width: 307px;
+    margin-bottom: 74px;
+  }
+
+  &__phone {
+    font-size: 32px;
+    line-height: 24px;
+    margin-bottom: 8px;
+  }
+
+  &__mail {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 78px;
+  }
+
+  &__adres {
+    font-size: 16px;
+    line-height: 160%;
+    width: 275px;
+    margin-bottom: 5px;
+  }
+
+  &__route {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.button {
+  width: 226px;
+  font-size: 16px;
+  line-height: 160%;
+  text-align: center;
+  color: #ffffff;
+  padding: 11px;
+  background-color: black;
+  border: none;
+  cursor: pointer;
 }
