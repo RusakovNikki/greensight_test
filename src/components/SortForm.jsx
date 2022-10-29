@@ -13,8 +13,11 @@ const SortForm = ({
       className="sortby__form form-item"
       onClick={() => setPositionForm((prev) => !prev)}
     >
-      <p className="form-item__title rubik-regular">Form</p>
+      <label htmlFor="#text" className="form-item__title rubik-regular">
+        Form
+      </label>
       <input
+        id="#text"
         value={sortByType.nameSort}
         type="text"
         placeholder="Not selected"

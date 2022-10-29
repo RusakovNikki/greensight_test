@@ -29,7 +29,7 @@ const Header = ({ sortByType, setSortByType }) => {
             Clear sorting
           </label>
           <span className="header__close-btn">
-            <img src={btnClose} alt="" id="close" />
+            <img src={btnClose} alt="" id="#close" />
           </span>
         </div>
       </div>

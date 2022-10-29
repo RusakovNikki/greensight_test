@@ -23,8 +23,11 @@ const Footer = () => {
         <div className="footer__flex-item footer__flex-item--margin">
           <form onSubmit={handleSubmit}>
             <div className="form-item footer__form">
-              <p className="form-item__title rubik-regular">Your name</p>
+              <label htmlFor="#name" className="form-item__title rubik-regular">
+                Your name
+              </label>
               <input
+                id="#name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 name="name"
@@ -35,8 +38,14 @@ const Footer = () => {
               />
             </div>
             <div className="form-item footer__form">
-              <p className="form-item__title rubik-regular">Email</p>
+              <label
+                htmlFor="#email"
+                className="form-item__title rubik-regular"
+              >
+                Email
+              </label>
               <input
+                id="#email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 name="email"
@@ -47,13 +56,18 @@ const Footer = () => {
               />
             </div>
             <div className="form-item footer__form">
-              <p className="form-item__title  rubik-regular">Phone number</p>
+              <label
+                htmlFor="#phone"
+                className="form-item__title  rubik-regular"
+              >
+                Phone number
+              </label>
               <input
+                id="#phone"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 name="phone"
                 type="tel"
-                id="phone"
                 pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}"
                 placeholder="7999-123-4578"
                 className="form-item__field rubik-regular"
@@ -61,8 +75,14 @@ const Footer = () => {
               />
             </div>
             <div className="form-item footer__form">
-              <p className="form-item__title rubik-regular">Comment</p>
+              <label
+                htmlFor="comment"
+                className="form-item__title rubik-regular"
+              >
+                Comment
+              </label>
               <input
+                id="comment"
                 value={comment}
                 onChange={(e) => setComment(e.target.value)}
                 type="tel"

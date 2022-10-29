@@ -14,7 +14,6 @@ const ShowJobs = ({ sortByType }) => {
   }, [sortByType])
   const jobsFiltered = jobItems?.filter((item, index) => index < 5 * page)
 
-  console.log(jobsFiltered.length / 5)
   const maxCountPage = jobsFiltered.length / 5
   return (
     <section className="jobs-container">

@@ -3,8 +3,11 @@ import React from "react"
 const SortPosition = ({ sortByType, setSortByType }) => {
   return (
     <div className="header__position form-item">
-      <p className="form-item__title rubik-regular">Position</p>
+      <label htmlFor="#position" className="form-item__title rubik-regular">
+        Position
+      </label>
       <input
+        id="#position"
         type="text"
         placeholder="Unspecified"
         className="form-item__field"
