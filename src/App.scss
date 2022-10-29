@@ -1,0 +1,201 @@
+@font-face {
+  font-family: "Formular";
+  src: url("/fonts/Formular.woff");
+}
+
+@font-face {
+  font-family: "Rubik-light";
+  src: url("/fonts/Rubik-Light.woff");
+}
+@font-face {
+  font-family: "Rubik-regular";
+  src: url("./fonts/Rubik-Regular.woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Regular.woff");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 1196px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.jobs-container {
+  &__item {
+    width: 1196px;
+    height: 331px;
+    display: flex;
+    border: 1px solid black;
+    padding: 20px;
+    margin-bottom: 24px;
+    box-sizing: border-box;
+  }
+  &__logo-container {
+    width: 446px;
+    height: 126px;
+    overflow: hidden;
+    background-color: #fff;
+    margin-right: 20px;
+    margin-bottom: 24px;
+  }
+  &__logo {
+    height: inherit;
+  }
+
+  &__title {
+    font-size: 32px;
+    line-height: 160%;
+    /* or 51px */
+
+    color: #000000;
+  }
+
+  &__specifics {
+    font-size: 16px;
+    line-height: 140%;
+    /* or 22px */
+
+    color: #000000;
+  }
+}
+
+.header {
+  width: inherit;
+  height: 304px;
+  border: 1px solid transparent;
+  margin-bottom: 30px;
+
+  &__title {
+    margin-top: 81px;
+    margin-bottom: 74px;
+
+    &-clear {
+      font-size: 16px;
+      line-height: 160%;
+      margin-top: 36px;
+      margin-left: 120px;
+      display: inline-block;
+
+      color: #a3a6a9;
+    }
+  }
+  &__clear {
+    position: relative;
+  }
+  &__close-btn {
+    position: absolute;
+    right: -24px;
+    top: 40px;
+  }
+
+  &__ul {
+    margin-top: 15px;
+    border: 1px solid black;
+  }
+
+  &__ul li {
+    display: block;
+    width: inherit;
+    padding: 15px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+
+  &__show-btn {
+    position: absolute;
+    right: 0;
+    top: 39px;
+    cursor: pointer;
+
+    &--rotate {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.rubik-light {
+  font-family: "Rubik-light";
+}
+.rubik-regular {
+  font-family: "Rubik-regular";
+}
+.formular {
+  font-family: "Formular";
+}
+.roboto {
+  font-family: "Roboto";
+}
+
+.title {
+  font-size: 64px;
+  line-height: 76px;
+  /* identical to box height */
+
+  /* Black */
+
+  color: #000000;
+}
+
+.form-item {
+  width: 466px;
+  height: 67px;
+  border-bottom: 1px solid black;
+
+  &__title {
+    font-size: 16px;
+    line-height: 160%;
+  }
+
+  &__field {
+    border: none;
+    width: inherit;
+    font-size: 16px;
+    line-height: 160%;
+    color: #a3a6a9;
+    margin-top: 7px;
+  }
+  &__field:focus {
+    outline: none;
+  }
+}
+
+.sortby {
+  display: flex;
+}
+
+.sortby__form {
+  position: relative;
+  margin-right: 20px;
+}
+
+.about {
+  &__type {
+    margin-bottom: 14px;
+    font-size: 16px;
+    line-height: 140%;
+    /* or 22px */
+
+    /* Dark grey */
+
+    color: #545454;
+  }
+
+  &__desc {
+    color: #000000;
+  }
+
+  &__type:last-child {
+    margin-bottom: 0px;
+  }
+}
