@@ -118,12 +118,21 @@ const Footer = () => {
             <div className="about-company__message">
               We will advise you and help you start a new project
             </div>
-            <div className="about-company__phone">+7 499 391-66-69</div>
-            <div className="about-company__mail">mail@greensight.ru</div>
+            <div className="about-company__phone">
+              <a href="tel:+74993916669">+7 499 391-66-69</a>
+            </div>
+            <div className="about-company__mail">
+              <a href="mailto:mail@greensight.ru">mail@greensight.ru</a>
+            </div>
             <div className="about-company__adres">
               Moscow, Zelenograd, Central Ave., bldg. 305, 3rd floor
             </div>
-            <div className="about-company__route">How to get there?</div>
+            <div className="about-company__route">
+              <a href="https://goo.gl/maps/N2EVxAnkKmJN4Uj87" target="_blank">
+                How to get
+              </a>
+              there?
+            </div>
           </div>
         </div>
       </div>
