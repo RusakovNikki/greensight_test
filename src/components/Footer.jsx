@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import InputMask from "react-input-mask"
 
 const Footer = () => {
   const [name, setName] = useState("")
@@ -62,7 +63,7 @@ const Footer = () => {
               >
                 Phone number
               </label>
-              <input
+              {/* <input
                 id="#phone"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
@@ -72,6 +73,14 @@ const Footer = () => {
                 placeholder="7999-123-4578"
                 className="form-item__field rubik-regular"
                 required
+              /> */}
+              <InputMask
+                className="form-item__field rubik-regular"
+                placeholder="+7(999) 999 9999"
+                id="#phone"
+                value={phone}
+                mask="+7 (999) 999 9999"
+                onChange={(e) => setPhone(e.target.value)}
               />
             </div>
             <div className="form-item footer__form">
@@ -85,7 +94,7 @@ const Footer = () => {
                 id="comment"
                 value={comment}
                 onChange={(e) => setComment(e.target.value)}
-                type="tel"
+                type="text"
                 name="comment"
                 placeholder="Message text"
                 className="form-item__field rubik-regular"
